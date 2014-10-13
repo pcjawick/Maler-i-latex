@@ -1,0 +1,44 @@
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+
+%pakker
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+%Makroer
+%overskriften
+  \definecolor{headingcolor}{RGB}{150,150,150}
+  \newcommand{\overskriften}[1]{\par\noindent\colorbox{headingcolor}
+  {\parbox{\dimexpr\textwidth-2\fboxsep\relax}{#1}}}
+%underoverskriften
+  \definecolor{subheadingcolor}{RGB}{150,150,150}
+  \newcommand{\underoverskriften}[1]{\par\noindent\colorbox{subheadingcolor}
+  {\parbox{\dimexpr\textwidth-2\fboxsep\relax}{#1}}}
+%faktaboksen
+  \definecolor{faktabokscolor}{RGB}{150,150,150}
+  \newcommand{\faktaboksen}[1]{\par\noindent\colorbox{faktabokscolor}
+  {\parbox{\dimexpr\textwidth-2\fboxsep\relax}{#1}}}
+%smartgoalboksen
+  \definecolor{smartgoalscolor}{RGB}{150,150,150}
+  \newcommand{\smarteboksen}[1]{\par\noindent\colorbox{smartgoalscolor}
+  {\parbox{\dimexpr\textwidth-2\fboxsep\relax}{#1}}}
+
+
+%Metadata
+  	\title{Nedre Eiker kommune - Øvre Eiker kommune \\ Rapport om SAMRUS prosjektet}
+	\author{Pål Ager-Wick}
+
+			\renewcommand{\abstractname}{\overskriften{\textsf{\Huge{Prosjektbeskrivelse}}}}
+			\renewcommand\partname{\overskriften{\textsf{\Huge{Del}}}}
+             % \renewcommand{\chaptername}{Del}
+	        \renewcommand\contentsname{\overskriften{\textsf{\Huge{Innhold}}}}
+	        \renewcommand\listfigurename{\overskriften{\textsf{\Huge{Illustrasjoner}}}}
+	        \renewcommand\tablename{\overskriften{\textsf{\Huge{Tabell}}}}
+			\renewcommand\listtablename{Tabeller}
+            \renewcommand\figurename{\overskriften{\textsf{\Huge{Illustrasjon}}}}
+\begin{abstract}
+
+\end{abstract}
+
+\end{document}

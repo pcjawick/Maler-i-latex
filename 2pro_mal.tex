@@ -1,0 +1,121 @@
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+
+%pakker
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{geometry} % to change the page dimensions
+	\geometry{a4paper} % or letterpaper (US) or a5paper or....
+	\geometry{margin=0.5in}
+\usepackage{fancyhdr}
+	\pagestyle{fancy}
+\usepackage{lipsum}
+\usepackage{mdframed}
+%header -footer kode
+% \lhead{}
+% \chead{}
+% \rhead{}
+% \lfoot{}
+% \cfoot{}
+% \rfoot{}
+
+
+%Makroer
+%overskriften
+  \definecolor{headingcolor}{RGB}{150,150,180}
+  \newcommand{\overskriften}[1]{\par\noindent\colorbox{headingcolor}
+  {\parbox{\dimexpr\textwidth-2\fboxsep\relax}{#1}}}
+%underoverskriften
+  \definecolor{subheadingcolor}{RGB}{150,110,170}
+  \newcommand{\underoverskriften}[1]{\par\noindent\colorbox{subheadingcolor}
+  {\parbox{\dimexpr\textwidth-10\fboxsep\relax}{#1}}}
+%faktaboksen
+  \definecolor{faktabokscolor}{RGB}{150,150,150}
+  \newcommand{\faktaboksen}[1]{\par\noindent\colorbox{faktabokscolor}
+  {\parbox{\dimexpr\textwidth-2\fboxsep\relax}{#1}}}
+%smartgoalboksen
+  \definecolor{smartgoalscolor}{RGB}{150,150,150}
+  \newcommand{\smarteboksen}[1]{\par\noindent\colorbox{smartgoalscolor}
+  {\parbox{\dimexpr\textwidth-2\fboxsep\relax}{#1}}}
+%rammedefinisjoner
+\mdfdefinestyle{mystyle}{backgroundcolor=black!20}
+\mdfdefinestyle{mystylered}{backgroundcolor=red!70}
+\mdfdefinestyle{mystyleblue}{backgroundcolor=blue!20}
+
+
+%Metadata
+  	\title{Prosjektmalen \\ Rapportmalen}
+				\author{
+			  LastName1, FirstName1\\
+			  \texttt{first1.last1@xxxxx.com}
+			  \and
+			  LastName2, FirstName2\\
+			  \texttt{first2.last2@xxxxx.com}}
+
+\begin{document}
+			\rhead{\textsf{LEGEVAKTA I DRAMMENSREGIONEN}}
+
+			\renewcommand\title{\underoverskriften}
+
+			\renewcommand\section{\underoverskriften}
+
+			\renewcommand\abstractname{\overskriften{\textsf{\Huge{Prosjektbeskrivelse}}}}
+	        
+	        \renewcommand\contentsname{\overskriften{\textsf{\Huge{Innhold}}}}
+	        
+	        \renewcommand\listfigurename{\overskriften{\textsf{\Huge{Illustrasjoner}}}}
+	        
+	        \renewcommand\tablename{\overskriften{\textsf{\Huge{Tabell}}}}
+			
+			\renewcommand\listtablename{Tabeller}
+            
+            \renewcommand\figurename{\overskriften{\textsf{\Huge{Illustrasjon}}}}
+
+
+\begin{figure}[ht]
+                      \begin{mdframed}[style=mystyleblue]
+\maketitle
+
+                      % \centering
+                      % \includegraphics{./pix/kaotiskvei.jpg}%placeholder
+                      % \caption[Framstilling av tjenestetilbudene]%\textit{tjenestetilbudene}.]
+                      % {Det kan være et forvirrende landskap å orientere seg i. Ikke minst for pasienten.\cite{shutter}}
+                    	\end{mdframed}
+                    \end{figure}    
+
+
+
+
+
+
+%% HER FØLGER STANDARD OVERSKRIFTER OG LAYOUT
+\begin{abstract}
+
+	\section{Metode}
+	
+	\lipsum[1]
+
+	\section{Mål}
+	\lipsum[2]
+
+	\section{Forventet resultat}
+	\lipsum[3]
+
+	
+
+\end{abstract}
+
+ 					\begin{figure}[ht]
+                      \begin{mdframed}[style=mystylered]
+                      \lipsum[4]
+
+
+                      % \centering
+                      % \includegraphics{./pix/kaotiskvei.jpg}%placeholder
+                      % \caption[Framstilling av tjenestetilbudene]%\textit{tjenestetilbudene}.]
+                      % {Det kan være et forvirrende landskap å orientere seg i. Ikke minst for pasienten.\cite{shutter}}
+                    	\end{mdframed}
+                    \end{figure}    
+
+\end{document}
